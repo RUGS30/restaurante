@@ -52,7 +52,7 @@ class RegisterController extends Controller
 
         //Redireccionar
 
-        return redirect()->route('posts');
+        return redirect()->route('login');
 
 
       

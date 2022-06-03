@@ -10,11 +10,28 @@
         <script src="https://kit.fontawesome.com/fe383ea4e7.js" crossorigin="anonymous"></script>
 
     </head>
+    <script>
+      window.addEventListener('mouseover', initLandbot, { once: true });
+      window.addEventListener('touchstart', initLandbot, { once: true });
+      var myLandbot;
+      function initLandbot() {
+        if (!myLandbot) {
+          var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+          s.addEventListener('load', function() {
+            var myLandbot = new Landbot.Livechat({
+              configUrl: 'https://chats.landbot.io/v3/H-1255978-FAUVWX040QXTYNHD/index.json',
+            });
+          });
+          s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+          var x = document.getElementsByTagName('script')[0];
+          x.parentNode.insertBefore(s, x);
+        }
+      }
+      </script>
 
 <body  class="bg-zinc-800 min-h-screen leading-none">
        
     <header>
-      @guest
         <nav class="bg-black border-gray-200 px-2 sm:px-4 py-4  ">
             <div class="container flex flex-wrap justify-between items-center mx-auto">
                 <a href="/inicio" class="flex items-center">
@@ -47,49 +64,17 @@
            
            </div>
          </nav>
-         @endguest
 
-         @auth
-         <nav class="bg-blue-400 py-5 px-9">
-          <div class="flex justify-between ">
-            <div>
-              <i class="fa fa-user-circle text-white text-lg" aria-hidden="true"><span class="px-2 font-bold">RG ADMIN</span> </i>
-            </div>
-            <div class="flex flex-row gap-2">
-              <a href="" class="text-white">
-                <p>Pedidos</p>
-              </a>
-              <a href="" class="text-white">
-                <p>Agregar</p>
-              </a>
-              <a href="" class="text-white">
-                <p>Usuarios</p>
-              </a>
-
-
-            </div>
-            <div>
-              <form action="{{ route('logout') }}" method="POST">
-                @csrf
-                <button type="submit" class="text-white font-bold text-lg">
-                     Cerrar Sesión
-                </button>
-   
-              </form>   
-            </div>
-          </div>
-          <div class="flex justify-end align-middle px-4">
-                        
-          </div>  
-
-         </nav>
-      
-        
-        
-        @endauth
      </header>
 
+     <div class="container-fluid ">
+      @include('layouts.alert')
+
+     </div>
+
      <main>
+       
+
 
            
             @yield('contenido')
@@ -102,7 +87,38 @@
      </main>
 
 
-    
+     <footer>
+       <!-- component -->
+<!-- This is an example component -->
+<div class=" mx-auto">
+
+	<footer class="p-4 rounded-lg shadow md:px-6 md:py-8 bg-black">
+		<div class="sm:flex sm:items-center sm:justify-between">
+			<a href="#" target="_blank" class="flex items-center mb-4 sm:mb-0">
+				<img src="{{ asset('img/logo.jpeg') }}" class="mr-4 h-8" alt="ElWero Logo" />
+				<span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">El Wero</span>
+			</a>
+			<ul class="flex flex-wrap items-center mb-6 sm:mb-0">
+				<li>
+					<a href="/inicio/#nosotros" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">Acerca de</a>
+				</li>
+			
+	
+				<li>
+					<a href="/inicio/#contacto" class="text-sm text-gray-500 hover:underline dark:text-gray-400">Contacto</a>
+				</li>
+			</ul>
+		</div>
+		<hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+		<span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="#" target="_blank" class="hover:underline">EQ.4</a>. Todos los derechos reservados.
+    </span>
+	</footer>
+
+
+</div>
+     </footer>
+
+     
 
 
     </body>

@@ -65,7 +65,7 @@
      
     </div>
     <div class="flex-1 h-full min-h-screen">
-      <div class="bg-white p-3 py-5">&nbsp;Bienvenido,   </div>
+      <div class="bg-white p-3 py-5">&nbsp;Bienvenido, al Panel de Administración </div>
       <div class="bg-white m-3 p-3" style="min-height: calc(100vh - 75px);">
         @yield('contenido')
       

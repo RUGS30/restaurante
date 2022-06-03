@@ -17,7 +17,7 @@ class Cart
 
 
         }else{
-            $this->items = [];
+            $this->items =[];
             $this->totalQuantity = 0;
             $this->totalPrice = 0;
 
@@ -34,7 +34,7 @@ class Cart
         if(array_key_exists($id,$this->items)){
             $productToAdd = $this->items[$id];
             $productToAdd['quantity']++;
-            $productToAdd['totalSinglePrice '] = $productToAdd['quantity'] * $price;
+            $productToAdd['totalSinglePrice'] = $productToAdd['quantity'] * $price;
 
 
         }else{
@@ -44,7 +44,6 @@ class Cart
         $this->items[$id] = $productToAdd;
         $this->totalQuantity++;
         $this->totalPrice = $this->totalPrice + $price;
-
 
 
     }

@@ -29,7 +29,7 @@ class LoginController extends Controller
 
         }
 
-        return redirect()->route('posts.index',auth()->user()->username);
+        return redirect()->route('AdminProductos',auth()->user()->username);
      
     }
 }

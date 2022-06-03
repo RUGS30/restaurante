@@ -1,16 +1,27 @@
-@extends('layouts.app')
 
-@section('titulo')
 
-   Registro
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>El Wero - Login</title>
+        <link rel="shortcut icon" href="{{ asset('img/logo.jpeg') }}" type="image/x-icon">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="https://kit.fontawesome.com/fe383ea4e7.js" crossorigin="anonymous"></script>
 
-@endsection
+    </head>
 
-@section('contenido')
+<body  class="bg-zinc-800 min-h-screen leading-none">
 
-    <h1 class="text-3xl text-center py-7 font-bold" style="color: #c8b82b">
-        @yield('titulo') de Usuarios
-    </h1>
+    <header class="py-7">
+        <h1 class="text-4xl text-center py-7 font-bold" style="color: #d9ca3e">
+            Registro de Usuarios
+        </h1>
+
+    </header>
+
 
     <div class="md:flex pt-7 md:justify-center md:gap-10  md:items-center">
         <div class="md:w-6/12 p-5">
@@ -128,5 +139,7 @@
 
     </div>
 
+     
+ </body>   
 
-@endsection
+ </html>

@@ -8,7 +8,7 @@
 
 @section('contenido')
 
-<h3 class="py-5 uppercase text-2xl text-white font-bold text-center">Carrito</h3>
+<h3 class="pt-10 uppercase text-2xl  font-bold text-center" style="color: #c8b82b "> <i class="fa fa-shopping-cart px-2" aria-hidden="true"></i> Carrito</h3>
 
 <!-- component -->
 <div class="flex justify-center my-6">
@@ -18,13 +18,13 @@
           <thead>
             <tr class="h-12 uppercase">
               <th class="hidden md:table-cell"></th>
-              <th class="text-left px-2">Productos</th>
+              <th class="text-left px-2" style="color: #c8b82b">Productos</th>
               <th class="lg:text-right text-left pl-5 lg:pl-0">
-                <span class="lg:hidden" title="Quantity">Ctd.</span>
-                <span class="hidden lg:inline">Cantidad</span>
+                <span class="lg:hidden" title="Quantity" style="color: #c8b82b">Ctd.</span>
+                <span class="hidden lg:inline"  style="color: #c8b82b" >Cantidad</span>
               </th>
-              <th class="hidden text-right md:table-cell">Precio Unitario</th>
-              <th class="text-right">Precio Total</th>
+              <th class="hidden text-right md:table-cell" style="color: #c8b82b">Precio Unitario</th>
+              <th class="text-right" style="color: #c8b82b">Precio Total</th>
             </tr>
           </thead>
           <tbody>
@@ -37,7 +37,7 @@
                   </a>
                 </td>
                 <td>
-                    <p class="mb-2 md:ml-4">{{ $item['data']['name'] }}</p>
+                    <p class="mb-2 md:ml-4" style="color: #c8b82b">{{ $item['data']['name'] }}</p>
                     <span class="mb-2 md:ml-4">{{ $item['data']['description'] }}</span>
                       <a href="{{ route('EliminarCarrito',['id'=> $item['data']['id']]) }}" type="submit" class="text-gray-700 md:ml-4">
                         <small class="text-red-500">(Eliminar Producto)</small>
@@ -58,7 +58,7 @@
                 </td>
                 <td class="text-right">
                   <span class="text-sm lg:text-base font-medium">
-                   $ {{ $item['totalSinglePrice']}}
+                   {{ $item['totalSinglePrice']}}
                   </span>
                 </td>
               </tr> 
@@ -74,7 +74,7 @@
         <hr class="pb-6 mt-6">
         <div class="my-4 mt-6 -mx-2 lg:flex">
           <div class="lg:px-2 lg:w-1/2">
-            <div class="p-4 bg-gray-100 text-gray-600 rounded-full">
+            <div class="p-4  text-black rounded-full" style="background-color: #c8b82b">
               <h1 class="ml-2 font-bold uppercase">Detalles de la Orden</h1>
             </div>
             <div class="p-4">
@@ -90,9 +90,9 @@
                     <div class="flex lg:px-4 lg:py-2 m-2 text-lg lg:text-xl font-bold text-white">
                       
                     
-                  <div class="flex justify-center pt-4">
-                    <a href="#">
-                        <button class="flex justify-center w-full px-10 py-2 mt-2 font-sm text-gray-700 uppercase bg-gray-200 rounded-full shadow item-center hover:bg-gray-300 focus:shadow-outline focus:outline-none">
+                  <div class="flex justify-center pt-2">
+                    <a href="{{ route('Datos_Envio') }}">
+                        <button class="flex justify-center w-full px-10 py-1 mt-1 font-sm text-black font-bold uppercase  rounded-full shadow item-center hover:bg-gray-300 focus:shadow-outline focus:outline-none" style="background-color: #c8b82b">
                           <span class="ml-2 mt-5px">Pagar</span>
                         </button>
                   </div>

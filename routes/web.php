@@ -79,11 +79,25 @@ Route::post('admin/sendCreateProductForm/',[AdminProductsController::class,'send
 //Eliminar Producto
 Route::get('admin/delete/{id}',[AdminProductsController::class,'deleteProduct']) ->name('Eliminar_Producto');
 
+//Crear una Orden
+
+Route::get('product/createOrder/',[ProductsController::class,'createOrder']) ->name('Crear_Orden');
+
+//Formulario Datos Envio
+Route::get('product/checkoutProducts/',[ProductsController::class,'checkoutProducts']) ->name('Datos_Envio');
+
+
+Route::post('product/createNewOrder/',[ProductsController::class,'createNewOrder']) ->name('createNeOrder');
+
+
+
+
+
 
 Route::get('admin/productos',[AdminProductsController::class,'index']) ->name('AdminProductos');
 
 
-Route::get('/{user:username}', [PostController::class,'index']) ->name('posts');
+Route::get('/{user:username}', [PostController::class,'index']) ->name('posts.index');
 
 
 
