@@ -31,7 +31,7 @@ Productos</h3>
             <td class="py-4 px-6 border-b border-grey-light">{{$product['name'] }}</td>
             <td class="py-4 px-6 border-b border-grey-light">{{$product['description'] }}</td>
             <td class="py-4 px-6 border-b border-grey-light">{{$product['type'] }}</td>
-            <td class="py-4 px-6 border-b border-grey-light">{{$product['price'] }}</td>
+            <td class="py-4 px-6 border-b border-grey-light"> $ {{$product['price'] }}</td>
             <td class="py-4 px-6 border-b border-grey-light  ">
               <a href="{{ route('Editar_Img_Producto',['id' => $product['id'] ]) }}" class="text-white font-bold py-1  px-3 rounded text-xs bg-green-500 hover:bg-green-dark">Editar Imagen</a>
               <a href="{{ route('Editar_Producto',['id' => $product['id'] ]) }}" class="text-white font-bold py-1 px-3 rounded text-xs bg-blue-500 hover:bg-blue-dark">Editar Producto</a>
@@ -43,6 +43,7 @@ Productos</h3>
         </tbody>
       </table>
     </div>
+    {{$products->links()}}
   </div>
 @endsection
 

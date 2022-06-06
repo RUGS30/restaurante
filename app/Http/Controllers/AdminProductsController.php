@@ -11,9 +11,16 @@ use Illuminate\Support\Facades\File;
 
 class AdminProductsController extends Controller
 {
+
+    public function __construct()
+    {
+        $this -> middleware('auth');
+
+    }
+
     public function index(){
 
-        $products= Product::all();
+        $products= Product::paginate(10);
         return view('admin.displayProducts',['products'=>$products] );
 
     }
@@ -132,6 +139,40 @@ class AdminProductsController extends Controller
         return redirect()->route("AdminProductos");
 
 
+    }
+
+    public function ordersPanel(){
+
+        $orders = DB::table('orders')->paginate(10);
+
+
+        return view('admin.ordersPanel',['orders' => $orders]);
+
+
+    }
+
+
+    public function deleteOrder(Request $request,$id){
+
+        $deleted = DB::table('orders')->where("order_id",$id)->delete();
+
+        if($deleted){
+            return redirect()->back()->with('OrderDeletionStatus','Orden '.$id. ' ha sido eliminada');
+        }else{
+
+            return redirect()->back()->with('OrderDeletionStatus','Orden '.$id. ' no se ha eliminado');
+
+        }
+
+    }
+
+
+    public function ordersItems(){
+
+        $delivers = DB::table('order_items')->paginate(10);
+
+
+        return view('admin.orderItems',['delivers' => $delivers]);
 
 
     }

@@ -53,12 +53,12 @@
                 </td>
                 <td class="hidden text-right md:table-cell">
                   <span class="text-sm lg:text-base font-medium">
-                    {{ $item['data']['price'] }}
+                   $ {{ $item['data']['price'] }}
                   </span>
                 </td>
                 <td class="text-right">
                   <span class="text-sm lg:text-base font-medium">
-                   {{ $item['totalSinglePrice']}}
+                   $ {{ $item['totalSinglePrice']}}
                   </span>
                 </td>
               </tr> 

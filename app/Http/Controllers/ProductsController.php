@@ -133,6 +133,7 @@ class ProductsController extends Controller
     }
 
     public function createNewOrder(Request $request){
+
         $cart = Session::get('cart');
 
         $name = $request->input('name');
@@ -144,7 +145,7 @@ class ProductsController extends Controller
 
         if($cart){
             $date = date('Y-m-d H:i:s');
-            $newOrderArray = array("status" => "on_hold", "date" => $date,"price"=>$cart->totalPrice);
+            $newOrderArray = array("status" => "Pendiente", "date" => $date,"price"=>$cart->totalPrice,"name"=>$name,"address"=>$address,"zip"=>$zip,"phone"=>$phone);
             $created_order = DB::table("orders")->insert($newOrderArray);
             $order_id = DB::getPdo()->lastInsertId();
 
@@ -163,11 +164,13 @@ class ProductsController extends Controller
 
             Session::forget("cart");
             Session::flush();
-            return redirect()->route("menu")->withsuccess("Gracias Por Elegirnos");
+
+            print_r($newOrderArray);
 
         }else{
 
-            return redirect()->route("menu");
+            dd('error');
+
         }
 
 

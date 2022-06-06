@@ -11,7 +11,7 @@
              <div class="bg-black relative rounded-xl   p-8 sm:p-12 shadow-xl">
                  <h3 class="mb-4 font-bold text-center text-2xl" style="color: #c8b82b;" >Datos de Envío</h3>
  
-                <form action="/createNewOrder" method="POST" >
+                <form action="/product/createNewOrder" method="post">
                  @csrf
                    <div class="mb-6">
                        <label for="name" class="block my-3 text-white">Nombre</label>
@@ -19,7 +19,7 @@
                          type="text"
                          id="name"
                          name="name"
-                         placeholder="Nombre "
+                         placeholder="Nombre y Apellido "
                          class="
                          w-full
                          rounded

@@ -954,6 +954,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
 }
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
 .pt-7 {
   padding-top: 1.75rem;
 }

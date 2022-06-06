@@ -20,8 +20,10 @@ return new class extends Migration
             $table->text('address');
             $table->text('status');
             $table->integer('zip');
-            $table->integer('phone');
+            $table->string('phone');
             $table->integer('price');
+
+           
         });
     }
 
@@ -33,7 +35,5 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('orders');
-       
-
     }
 };

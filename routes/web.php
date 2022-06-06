@@ -87,7 +87,32 @@ Route::get('product/createOrder/',[ProductsController::class,'createOrder']) ->n
 Route::get('product/checkoutProducts/',[ProductsController::class,'checkoutProducts']) ->name('Datos_Envio');
 
 
-Route::post('product/createNewOrder/',[ProductsController::class,'createNewOrder']) ->name('createNeOrder');
+Route::post('product/createNewOrder/',[ProductsController::class,'createNewOrder']) ->name('createNewOrder');
+
+Route::get('product/checkoutProducts/',[ProductsController::class,'checkoutProducts']) ->name('Datos_Envio');
+
+
+
+//Ordenes Routes
+
+Route::get('admin/ordersPanel/',[AdminProductsController::class,'ordersPanel']) ->name('Ordenes_Panel');
+
+
+//Eliminar Orden
+
+Route::get('admin/deleteOrder/{id}',[AdminProductsController::class,'deleteOrder']) ->name('Eliminar_Orden');
+
+
+Route::get('admin/deliverPanel/',[AdminProductsController::class,'deliverPanel']) ->name('Pedidos_Panel');
+
+
+Route::get('admin/ordersItems/',[AdminProductsController::class,'ordersItems']) ->name('Pedidos_Panel');
+
+
+
+
+
+
 
 
 

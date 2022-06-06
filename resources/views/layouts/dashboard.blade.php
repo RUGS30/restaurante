@@ -36,22 +36,29 @@
           </a>
         </div>
         <ul class="text-white">
+         
           <li>
-            <a href="javascript:;" class="block p-3 border-b border-gray-900 hover:text-orange-400">
-              <i class="fas fa-home fa-fw"></i>
-              <span class="hidden-item">Inicio</span>
-            </a>
-          </li>
-          <li>
-            <a href="{{ route('AdminProductos') }}" class="block p-3 mb-2 border-gray-900 hover:text-orange-400">
+            <a href="{{ route('AdminProductos') }}" class="block p-3 mb-2 mt-2 border-gray-900 hover:text-orange-400">
               <i class="fa-solid fa-utensils fa-fw"></i>  
               <span class="hidden-item">Productos</span>          
             </a>  
           </li>
           <li>
-            <a href="{{ route('Agregar_Producto') }}" class="p-3 border-gray-900 hover:text-orange-400">
+            <a href="{{ route('Agregar_Producto') }}" class="block p-3 mb-2 border-gray-900 hover:text-orange-400">
               <i class="fa-solid fa-plus fa-fw"></i>              
               <span class="hidden-item">Agregar Producto</span>          
+            </a>  
+          </li>
+          <li>
+            <a href="{{ route('Ordenes_Panel') }}" class=" block p-3 border-gray-900 hover:text-orange-400">
+              <i class="fa-solid fa-file-invoice fa-fw"></i>              
+              <span class="hidden-item px-1">Ordenes</span>          
+            </a>  
+          </li>
+          <li>
+            <a href="{{ route('Pedidos_Panel') }}" class=" block p-3 border-gray-900 hover:text-orange-400">
+              <i class="fa-solid fa-truck-fast fa-fw"></i>              
+              <span class="hidden-item px-1">Pedidos</span>          
             </a>  
           </li>
         </ul>
