@@ -3,31 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>El Wero - @yield('titulo')</title>
+        <title>Serrecom - @yield('titulo')</title>
         <link rel="shortcut icon" href="{{ asset('img/logo.jpeg') }}" type="image/x-icon">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <script src="{{ asset('js/app.js') }}" defer></script>
         <script src="https://kit.fontawesome.com/fe383ea4e7.js" crossorigin="anonymous"></script>
 
     </head>
-    <script>
-      window.addEventListener('mouseover', initLandbot, { once: true });
-      window.addEventListener('touchstart', initLandbot, { once: true });
-      var myLandbot;
-      function initLandbot() {
-        if (!myLandbot) {
-          var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
-          s.addEventListener('load', function() {
-            var myLandbot = new Landbot.Livechat({
-              configUrl: 'https://chats.landbot.io/v3/H-1255978-FAUVWX040QXTYNHD/index.json',
-            });
-          });
-          s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
-          var x = document.getElementsByTagName('script')[0];
-          x.parentNode.insertBefore(s, x);
-        }
-      }
-      </script>
 
 <body  class="bg-zinc-800 min-h-screen leading-none">
        

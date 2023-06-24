@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>El Wero - Admin</title>
-        <link rel="shortcut icon" href="{{ asset('img/logo.jpeg') }}" type="image/x-icon">
+        <title>Serrecom</title>
+        <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/x-icon">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <script src="{{ asset('js/app.js') }}" defer></script>
         <script src="https://kit.fontawesome.com/fe383ea4e7.js" crossorigin="anonymous"></script>
@@ -72,7 +72,7 @@
      
     </div>
     <div class="flex-1 h-full min-h-screen">
-      <div class="bg-white p-3 py-5">&nbsp;Bienvenido, al Panel de Administración </div>
+      <div class="bg-white p-3 py-5">&nbsp;Bienvenido, al Panel de Administración <span class=" font-bold text-md text-blue-800"> {{auth()->user()->username}} </span></div>
       <div class="bg-white m-3 p-3" style="min-height: calc(100vh - 75px);">
         @yield('contenido')
       

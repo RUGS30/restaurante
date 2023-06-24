@@ -21,7 +21,7 @@ use App\Http\Controllers\AdminProductsController;
 */
 
 Route::get('/', function () {
-    return view('/inicio/index');
+    return view('auth.login');
 });
 
 

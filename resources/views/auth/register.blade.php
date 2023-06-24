@@ -5,8 +5,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>El Wero - Login</title>
-        <link rel="shortcut icon" href="{{ asset('img/logo.jpeg') }}" type="image/x-icon">
+        <title>Serrecom - Registro</title>
+        <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/x-icon">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <script src="{{ asset('js/app.js') }}" defer></script>
         <script src="https://kit.fontawesome.com/fe383ea4e7.js" crossorigin="anonymous"></script>
@@ -14,6 +14,7 @@
     </head>
 
 <body  class="bg-zinc-800 min-h-screen leading-none">
+    
 
     <header class="py-7">
         <h1 class="text-4xl text-center py-7 font-bold" style="color: #d9ca3e">
